@@ -19,6 +19,9 @@ class UsersController extends AppController
     public function beforeFilter(Event $event)
     {
         $this->Auth->allow(['signUp', 'forgotPassword']);
+        /*if ($this->Auth->user('permissions') == 'guest'){
+            print_r("sjdfjshdf");exit;
+        }*/
 //        $this->Auth->deny(['index','']);
     }
 
@@ -29,6 +32,8 @@ class UsersController extends AppController
      */
     public function index()
     {
+
+
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
