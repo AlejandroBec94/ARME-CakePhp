@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dbe6c02-2ddf-4ae6-9f0a-adec7f8f5316" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Template/Users/_signup.ctp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Template/Users/login.ctp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Template/Users/login.ctp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Template/Users/signup.ctp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Template/Users/signup.ctp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_users" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_default_users" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/myapp_cake_routes_route_collection" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/myapp_cake_routes_route_collection" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Table/UsersTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Table/UsersTable.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,18 +27,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="63" />
-              <folding>
-                <element signature="e#35#71#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Template/Users/login.ctp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
@@ -56,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Template/Users/signup.ctp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="573">
@@ -110,6 +89,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/Table/UsersTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Template/Users/_signup.ctp">
           <provider selected="true" editor-type-id="text-editor">
@@ -138,19 +126,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/config/routes.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/webroot/css/home.css" />
         <option value="$PROJECT_DIR$/webroot/css/style.css" />
         <option value="$PROJECT_DIR$/webroot/css/base.css" />
-        <option value="$PROJECT_DIR$/src/Model/Table/UsersTable.php" />
-        <option value="$PROJECT_DIR$/src/Model/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Controller/AppController.php" />
         <option value="$PROJECT_DIR$/src/Template/Layout/default.ctp" />
         <option value="$PROJECT_DIR$/src/Template/Users/login.ctp" />
         <option value="$PROJECT_DIR$/src/Controller/UsersController.php" />
         <option value="$PROJECT_DIR$/src/Template/Users/signup.ctp" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/src/Model/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Model/Table/UsersTable.php" />
       </list>
     </option>
   </component>
@@ -277,6 +265,13 @@
               <item name="CakePHP-HelpDesk" type="b2602c69:ProjectViewProjectNode" />
               <item name="CakePHP-HelpDesk" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="Table" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CakePHP-HelpDesk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CakePHP-HelpDesk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -362,7 +357,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22227000" />
+    <option name="totallyTimeSpent" value="22907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -433,13 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Table/UsersTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -500,20 +488,6 @@
         <state relative-caret-position="-1080" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6216">
-          <caret line="259" column="31" selection-start-line="259" selection-start-column="31" selection-end-line="259" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Users/_login.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Users/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -548,16 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="63" />
-          <folding>
-            <element signature="e#35#71#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -568,10 +532,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="259" column="35" selection-start-line="259" selection-start-column="35" selection-end-line="259" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Users/signup.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
           <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="e#35#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Users/_login.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/UsersTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
         </state>
       </provider>
     </entry>
