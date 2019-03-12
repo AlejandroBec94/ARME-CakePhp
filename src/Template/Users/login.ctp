@@ -26,7 +26,7 @@
     <div class="row">
 
         <div class="col-md-12 text-center mb-4">
-            <!--<img alt="logo" src="/template/assets/img/logo-3.png" class="theme-logo">-->
+            <!--<img alt="logo" src="/template/assets/img/logo-3.png" class="theme-logo">  -->
             <?= $this->Html->image('/template/assets/img/ARME.png',['class'=>'theme-logo','alt'=>'logo','style'=>'width:130px;']) ?>
 
         </div>

@@ -94,7 +94,7 @@ class UsersController extends AppController
             if ($user) {
                 $this->Auth->setUser($user);
                 $this->Flash->success(__('Autenticación aceptada'));
-                return $this->redirect(['controller' => 'Users', 'action' => 'index']);
+                return $this->redirect(['controller' => 'helpdesk', 'action' => 'index']);
             }
 
             $this->Flash->error(__('Autenticación erronea'));
