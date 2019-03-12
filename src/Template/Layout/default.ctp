@@ -47,7 +47,15 @@
             <a href="javascript:void(0);" class="nav-link dropdown-toggle user d-inline-block float-right"
                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media">
+                    <?php if ($this->request->getSession()->read('Auth.User.photo')){ ?>
+
+                    <?= $this->Html->image("/img/".$this->request->getSession()->read('Auth.User.photo')) ?>
+
+                    <?php }else{  ?>
+
                     <img src="https://ui-avatars.com/api/?name=<?= $this->request->getSession()->read('Auth.User.username') ?>" class="img-fluid mr-2" alt="admin-profile">
+
+                    <?php } ?>
                     <!--<?= $this->Html->image('https://ui-avatars.com/api/?name=John+Doe',['class'=>'theme-logo','alt'=>'logo','style'=>'width:130px;']) ?>-->
                     <div class="media-body align-self-center">
                         <h6 class="mb-1"><?= $this->request->getSession()->read('Auth.User.username') ?></h6>
@@ -149,8 +157,15 @@
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media">
                     <!--<img src="assets/img/90x90.jpg" class="img-fluid mr-2" alt="admin-profile">-->
-                    <img src="https://ui-avatars.com/api/?name=<?= $this->request->getSession()->read('Auth.User.email') ?>" class="img-fluid mr-2" alt="admin-profile">
-                    <div class="media-body align-self-center">
+                    <?php if ($this->request->getSession()->read('Auth.User.photo')){ ?>
+
+                    <?= $this->Html->image("/img/".$this->request->getSession()->read('Auth.User.photo')) ?>
+
+                    <?php }else{  ?>
+
+                    <img src="https://ui-avatars.com/api/?name=<?= $this->request->getSession()->read('Auth.User.username') ?>" class="img-fluid mr-2" alt="admin-profile">
+
+                    <?php } ?><div class="media-body align-self-center">
                         <h6 class="mb-1"><?= $this->request->getSession()->read('Auth.User.username') ?></h6>
                         <p class="mb-0"><?= $this->request->getSession()->read('Auth.User.email') ?></p>
                     </div>
@@ -164,9 +179,10 @@
                     </div>
                 </div>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item d-flex" href="user_profile.html">
+                <?php  echo $this->Html->link('<i class="mr-3 flaticon-user-11"></i><span class="align-self-center">Perfil</span>',['controller'=>'users','action'=>'profile',$this->request->getSession()->read('Auth.User.id')],array('escape' => false,'class'=>'dropdown-item d-flex',)); ?>
+                <!--<a class="dropdown-item d-flex" href="user_profile.html">
                     <i class="mr-3 flaticon-user-11"></i> <span class="align-self-center">Profile Setting</span>
-                </a>
+                </a>-->
                 <a class="dropdown-item d-flex" href="apps_scheduler.html">
                     <i class="mr-3 flaticon-calendar"></i> <span class="align-self-center">Schedule</span>
                 </a>

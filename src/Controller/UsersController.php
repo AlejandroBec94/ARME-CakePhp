@@ -113,6 +113,14 @@ class UsersController extends AppController
         $this->redirect($this->Auth->logout());
     }
 
+    public function profile($id = null){
+
+        $UserInfo = $this->Users->get($id);
+        $this->set(compact('UserInfo'));
+
+
+    }
+
     /**
      * Add method
      *
