@@ -1,73 +1,76 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User $user
- */
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Registrate</title>
+    <?= $this->Html->meta('icon') ?>
 
-<div class="users form large-12 medium-8 columns content">
-    <!--<?= $this->Form->create($user) ?>-->
-    <!--<fieldset>
-        <legend><?= __('Add User') ?></legend>
-        <?php
-            echo $this->Form->control('email');
-            echo $this->Form->control('password');
-            echo $this->Form->control('phone');
-        ?>
-    </fieldset>-->
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
 
-    <?= $this->Form->create($user,['type'=>'post']) ?>
-    <fieldset>
-        <legend>Registro</legend>
 
-        <div class="form-group">
-            <label for="phone">Teléfono</label>
-            <input type="text" name="phone" class="form-control" id="phone"
-                   placeholder="Introduce tu teléfono">
-            <!--<?php  echo $this->Form->control('phone',['type'=>'text','name'=>'phone','class'=>'form-control','id'=>'phone','placeholder'=>'Introduce tu teléfono']); ?>-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <?= $this->Html->css('/template/bootstrap/css/bootstrap.min.css') ?>
+    <?= $this->Html->css('/template/assets/css/plugins.css') ?>
+    <?= $this->Html->css('/template/assets/css/users/register-2.css') ?>
+
+    <?= $this->Html->script('/template/assets/js/libs/jquery-3.1.1.min.js') ?>
+    <?= $this->Html->script('/template/bootstrap/js/popper.min.js') ?>
+    <?= $this->Html->script('/template/bootstrap/js/bootstrap.min.js') ?>
+    <!-- END GLOBAL MANDATORY STYLES -->
+</head>
+<body class="register">
+<?= $this->Form->create($user,['type'=>'post','class'=>'form-register']) ?>
+
+<!--<form class="form-register">-->
+    <div class="row">
+        <div class="col-md-12 text-center mb-4">
+            <!--<img alt="logo" src="assets/img/logo-3.png" class="theme-logo">-->
+            <?= $this->Html->image('/template/assets/img/ARME.png',['class'=>'theme-logo','alt'=>'logo','style'=>'width:130px;']) ?>
 
         </div>
-        <div class="form-group">
-            <label for="email">Correo</label>
-            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
-                   placeholder="Introduce tu correo">
-            <!--<?php echo $this->Form->control('email',['type'=>'email','name'=>'email','class'=>'form-control','id'=>'email','describedby'=>'emailHelp','placeholder'=>'Introduce tu correo']); ?>-->
-            <!--<?= $this->Form->control('email',['placeholder'=>'Introduce tu Correo','class'=>'form-control']); ?>-->
-        </div>
-        <label for="email">Contraseña</label>
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Ver contraseña" id="PasswordView">
+
+        <div class="col-md-12">
+
+            <label for="email" class="sr-only">Correo Electrónico</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="icon-inputEmail"><i class="flaticon-email-fill-2"></i> </span>
                 </div>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Email Address"  autocomplete="off" aria-describedby="inputEmail" required >
             </div>
-            <input type="password" name="password" id="password" style="font-size: 25px;" class="form-control"
-                   aria-label="Text input with radio button">
-            <!--<?php echo $this->Form->control('password',['type'=>'password','name'=>'password','class'=>'form-control','id'=>'password','style'=>'font-size: 25px;','placeholder'=>'Introduce tu contraseña','aria-label'=>"Text input with radio button"]); ?>-->
+
+            <label for="username" class="sr-only">Usuario</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="icon-username"><i class="flaticon-user-7"></i> </span>
+                </div>
+                <input type="text" name="username" id="username" class="form-control" placeholder="Username" aria-describedby="username" autocomplete="off" required >
+            </div>
+
+            <label for="password" class="sr-only">Password</label>
+
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="icon-inputPassword"><i class="flaticon-key-2"></i> </span>
+                </div>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Password" autocomplete="off" aria-describedby="inputPassword" required >
+            </div>
+
+            <button class="btn btn-lg btn-gradient-warning btn-block btn-rounded mb-4 mt-5" type="submit">Register</button>
 
         </div>
-        <small id="passwordHelp" class="form-text text-muted">Nunca compartas tu contraseña.
-        </small>
-        <?php
-        ?>
-    </fieldset>
 
-    <hr>
-    <!--<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>-->
-    <?= $this->Form->button(__('Registrate'),['class'=>'btn btn-primary ']) ?>
+    </div>
+<!--</form>-->
+<?= $this->Form->end() ?>
 
-    </fieldset>
+<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+<script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+<script src="bootstrap/js/popper.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 
-    <?= $this->Form->end() ?>
-</div>
-<script>
-
-    $("#PasswordView").on("change", function () {
-        if ($("#PasswordView").is(':checked')) {
-            $("#password").attr("type", 'text')
-        } else {
-            $("#password").attr("type", 'password')
-        }
-    })
-
-</script>
+<!-- END GLOBAL MANDATORY SCRIPTS -->
+</body>
+</html>
