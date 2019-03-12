@@ -94,6 +94,7 @@ class UsersController extends AppController
             $this->Flash->error(__('Autenticación erronea'));
 
         }
+        $this->viewBuilder()->enableAutoLayout(false);
     /*
         $this->set(['user' => $user]);
         $this->set('_serialize', ['user']);*/
