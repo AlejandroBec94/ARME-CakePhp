@@ -22,7 +22,7 @@
 ===============
 */
 .desktop-nav.header {
-  background-color: #3232b7;
+  background-color: #6200EA;
   padding: 20px 10px;
   z-index: 1040;
 }
@@ -147,7 +147,7 @@
     top: 17px;
     z-index: 6;
     font-size: 21px;
-    color: #3232b7;
+    color: #fff;
     pointer-events: none;
 }
 
@@ -163,21 +163,21 @@
     -webkit-border-radius: 10em;
     -moz-border-radius: 10em;
     border-radius: 10em;
-    color: #3232b7;
+    color: #fff;
     -webkit-transition: width 0.4s ease-in-out, padding-left 0.4s ease-in-out;
     transition: width 0.4s ease-in-out, padding-left 0.4s ease-in-out;
 }
 .desktop-nav.header .navbar-nav .form-inline.search input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #3232b7;
+  color: #E8EAF6;
 }
 .desktop-nav.header .navbar-nav .form-inline.search input::-moz-placeholder { /* Firefox 19+ */
-  color: #3232b7;
+  color: #E8EAF6;
 }
 .desktop-nav.header .navbar-nav .form-inline.search input:-ms-input-placeholder { /* IE 10+ */
-  color: #3232b7;
+  color: #E8EAF6;
 }
 .desktop-nav.header .navbar-nav .form-inline.search input:-moz-placeholder { /* Firefox 18- */
-  color: #3232b7;
+  color: #E8EAF6;
 }
 
 
@@ -1586,7 +1586,7 @@
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background: #3b3f5c!important;
+        background: #fff!important;
         z-index: 998!important;
         opacity: 0;
         transition: all 0.5s ease-in-out;

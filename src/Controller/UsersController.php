@@ -115,9 +115,19 @@ class UsersController extends AppController
 
     public function profile($id = null){
 
-        $UserInfo = $this->Users->get($id);
-        $this->set(compact('UserInfo'));
-
+        if($id == null){
+            return $this->redirect(
+                ['controller' => 'helpdesk', 'action' => 'index']
+            );
+        }
+        try {
+            $UserInfo = $this->Users->get($id);
+            $this->set(compact('UserInfo'));
+        } catch (\Exception $e) {
+            return $this->redirect(
+                ['controller' => 'helpdesk', 'action' => 'index']
+            );
+        }
 
     }
 
@@ -134,6 +144,7 @@ class UsersController extends AppController
 //        print_r($this->request->getData());exit;
 //        print_r($user);exit;
         if ($this->request->is('post')) {
+            print_r($this->request->getData());exit;
             $user = $this->Users->patchEntity($user, $this->request->getData());
 
             if ($this->Users->save($user)) {
@@ -141,7 +152,7 @@ class UsersController extends AppController
 
                 return $this->redirect(['action' => 'index']);
             }
-
+exit;
             /*$query = $this->Users->query();
             $query->insert(['email', 'password','phone'])
                 ->values([

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 
-<!--  END NAVBAR  -->
 
 
 <!--  BEGIN CONTENT PART  -->
@@ -9,7 +8,7 @@
     <div class="container">
         <div class="page-header">
             <div class="page-title">
-                <h3>Helpdesk</h3>
+                <!--<h3>Helpdesk</h3>-->
             </div>
         </div>
 
@@ -18,7 +17,7 @@
             <div class="hd-header-wrapper mb-5">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h4 class="mb-5">How May I Help You?</h4>
+                        <h4 class="mb-5">¿Como puedo ayudarte?</h4>
 
                         <div class="row">
                             <div class="col-xl-5 col-lg-7 col-md-7 col-sm-11 col-11 mx-auto">
@@ -28,7 +27,7 @@
                                                 class="flaticon-search"></i></span>
                                     </div>
                                     <input type="text" class="form-control"
-                                           placeholder="Let's find your question in fast way" aria-label="Username"
+                                           placeholder="Encuentra la respuesta a tu pregunta rápidamente" aria-label="Username"
                                            aria-describedby="basic-addon1">
                                 </div>
 
@@ -47,8 +46,8 @@
                                    href="#pills-statistics" role="tab" aria-controls="pills-statistics"
                                    aria-selected="true">
                                     <i class="flaticon-pie-line-chart"></i>
-                                    <h6 class="mt-3 mb-3">Statistics</h6>
-                                    <p>Lorem ipsum dolor dolore magna aliqua.</p>
+                                    <h6 class="mt-3 mb-3">Preguntas sin respuesta</h6>
+                                    <!--<p>Preguntas sin respuesta</p>-->
                                 </a>
                             </li>
 

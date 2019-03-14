@@ -29,6 +29,12 @@
         });
     </script>
     <?= $this->Html->script('/template/assets/js/custom.js') ?>
+
+    <!--VueJs-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>-->
+    <!--VueJs-->
+
     <!-- END GLOBAL MANDATORY STYLES -->
 
 </head>
@@ -762,7 +768,8 @@
                                                 <a href="pages_blank_page.html"> Blank Page</a>
                                             </li>
                                             <li>
-                                                <a href="pages_helpdesk.html"> Helpdesk </a>
+                                                <!--<a href="pages_helpdesk.html"> Helpdesk </a>-->
+                                                <?= $this->Html->Link('Helpdesk',['controller'=>'helpdesk','action'=>'index']) ?>
                                             </li>
                                             <li>
                                                 <a href="pages_contact_us.html"> Contact Form </a>
@@ -1185,9 +1192,11 @@
                 <a class="dropdown-item d-flex" href="dragndrop_scrumboard.html">
                     <i class="mr-3 flaticon-edit-3"></i><span>Scrumboard</span>
                 </a>
-                <a class="dropdown-item d-flex" href="pages_helpdesk.html">
+                <!--<a class="dropdown-item d-flex" href="pages_helpdesk.html">
                     <i class="mr-3 flaticon-copy"></i><span>Helpdesk</span>
-                </a>
+                </a>-->
+                <?= $this->Html->Link('<i class="mr-3 flaticon-copy"></i><span>Helpdesk</span>',['controller'=>'helpdesk','action'=>'index','class'=>'dropdown-item d-flex'],array('escape' => false,'class'=>'dropdown-item d-flex')) ?>
+
                 <a class="dropdown-item d-flex" href="pages_contact_us.html">
                     <i class="mr-3 flaticon-location-1"></i><span>Contact Us</span>
                 </a>
@@ -1237,7 +1246,7 @@
                     </div>
                 </div>
                 <div class="dropdown-divider"></div>
-                <?php  echo $this->Html->link('<i class="mr-3 flaticon-user-11"></i><span class="align-self-center">Perfil</span>',['controller'=>'users','action'=>'profile',$this->request->getSession()->read('Auth.User.id')],array('escape' => false,'class'=>'dropdown-item d-flex',)); ?>
+                <?php  echo $this->Html->link('<i class="mr-3 flaticon-user-11"></i><span class="align-self-center">Perfil</span>',['controller'=>'users','action'=>'profile',$this->request->getSession()->read('Auth.User.id')],array('escape' => false,'class'=>'dropdown-item d-flex')); ?>
                 <!--<a class="dropdown-item d-flex" href="user_profile.html">
                     <i class="mr-3 flaticon-user-11"></i> <span class="align-self-center">Profile Setting</span>
                 </a>-->

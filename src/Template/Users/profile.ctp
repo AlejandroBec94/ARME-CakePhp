@@ -17,11 +17,11 @@
 
 <div id="content" class="main-content">
     <div class="container">
-        <div class="page-header">
+        <!--<div class="page-header">
             <div class="page-title">
                 <h3>Profile</h3>
             </div>
-        </div>
+        </div>-->
 
         <div class="row layout-spacing">
 
@@ -33,9 +33,18 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="media ml-sm-5 ml-1">
-                                        <img class="mr-sm-3 mr-2 usr-img" src="assets/img/200x200.jpg" alt="usr-img">
+                                        <?php if ($this->request->getSession()->read('Auth.User.photo')){ ?>
+
+                                        <?= $this->Html->image('/template/assets/img/'.$UserInfo['photo'],['class'=>'mr-sm-3 mr-2 usr-img']); ?>
+
+                                        <?php }else{  ?>
+
+                                        <img src="https://ui-avatars.com/api/?name=<?= $this->request->getSession()->read('Auth.User.username') ?>" class="img-fluid mr-2" alt="admin-profile">
+
+                                        <?php } ?>
+                                        <!--<img class="mr-sm-3 mr-2 usr-img" src="assets/img/200x200.jpg" alt="usr-img">-->
                                         <div class="media-body">
-                                            <h5 class="usr-name">Shaun Park</h5>
+                                            <h5 class="usr-name"><?= $UserInfo['username'] ?></h5>
                                         </div>
                                     </div>
                                 </div>
