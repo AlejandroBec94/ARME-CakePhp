@@ -53,10 +53,10 @@ class UsersTable extends Table
             ->allowEmptyString('id', 'create')
             ->add('id', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
-        $validator
+        /*$validator
             ->email('email')
             ->allowEmptyString('email')
-            ->add('email', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+            ->add('email', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);*/
 
         $validator
             ->scalar('password')

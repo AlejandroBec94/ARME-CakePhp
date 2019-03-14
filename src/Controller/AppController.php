@@ -59,6 +59,7 @@ class AppController extends Controller
             ],
             'storage' => 'Session'
         ]);
+        $this->loadComponent('RequestHandler');
 
         /*
          * Enable the following component for recommended CakePHP security settings.

@@ -19,6 +19,7 @@ class UsersController extends AppController
     public function beforeFilter(Event $event)
     {
         $this->Auth->allow(['signUp', 'forgotPassword']);
+        $this->set('_serialize', true);
         /*if ($this->Auth->user('permissions') == 'guest'){
             print_r("sjdfjshdf");exit;
         }*/
@@ -144,15 +145,16 @@ class UsersController extends AppController
 //        print_r($this->request->getData());exit;
 //        print_r($user);exit;
         if ($this->request->is('post')) {
-            print_r($this->request->getData());exit;
+//            print_r($this->request->getData());exit;
             $user = $this->Users->patchEntity($user, $this->request->getData());
 
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('El usuario ha sido guardado correctamente :D'));
+//                $this->Flash->success(__('El usuario ha sido guardado correctamente :D'));
 
-                return $this->redirect(['action' => 'index']);
+//                echo "200";
+                return $this->redirect(['action' => 'login']);
             }
-exit;
+
             /*$query = $this->Users->query();
             $query->insert(['email', 'password','phone'])
                 ->values([
@@ -167,10 +169,13 @@ exit;
                 return $this->redirect(['action' => 'index']);
             }*/
 
-            $this->Flash->error(__('Imposible guardar. Intente de nuevo.'));
+//            $this->Flash->error(__('Imposible guardar. Intente de nuevo.'));
         }
-        $this->set(compact('user'));
-        $this->viewBuilder()->enableAutoLayout(false);
+        else{
+            $this->set(compact('user'));
+            $this->viewBuilder()->enableAutoLayout(false);
+        }
+
 
     }
 

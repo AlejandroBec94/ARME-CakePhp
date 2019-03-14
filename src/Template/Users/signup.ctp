@@ -127,7 +127,7 @@
                     data: {
                         username: 'Sherlock',
                         password: 'kkpipip2',
-                        email: 'Moriarty'
+                        email: 'sdffdd@sdff.com.mx'
                     },
                     dataType: 'json',
                     beforeSend: function(xhr) {
@@ -135,11 +135,12 @@
                     },
                     success:function(data) {
 
-                            console.log(data)
+                                // location.href= "/";
+                                alert("ajksd")
 
                     },
                     error: function(xhr, status, error) {
-                        alert(xhr.responseText);
+                        console.log(xhr.responseText);
                     }
                 });
                 console.log("Termina");
